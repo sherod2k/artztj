@@ -1,0 +1,58 @@
+doctype html 
+html(lang='en')
+  head
+    title=title
+    link(href='stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    script(src='javascripts/fb.js')
+  body
+    nav.navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') fblogin
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+             li(class=(title == 'Home Page' ? 'active' : ''))
+               a(href='/') Home
+             li(class=(title == 'Contacts Page' ? 'active' : ''))
+               a(href='/contact') Contact 
+             li(class=(title == 'Paintings Listing' ? 'active' : ''))
+               a(href='/view') View Paintings
+          ul.nav.navbar-nav
+           if user
+             li.dropdown
+               a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-expanded="false") Maintenance
+                span.caret
+               ul.dropdown-menu(role = "menu")
+                li
+                 a(href='/addPainting') Add Painting*
+                li
+                 a(href='/delPainting') Delete Painting
+                li
+                 a(href='/modPainting') Modify Painting 
+          ul.nav.navbar-nav.navbar-right
+           if !user
+             li.dropdown
+               a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-expanded="false") Login
+                span.caret
+               ul.dropdown-menu(role = "menu")
+                li
+                 a(href='/login') Default Login 
+                li
+                 a(href='/auth/facebook') Facebook Login  
+                li
+                 a(href='/register') Register User  
+             li
+           if user    
+               a(href='/logout') Logout
+    .container
+     block content
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+   

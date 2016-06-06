@@ -1,0 +1,62 @@
+<% include partials/header %>
+
+    <div class = "row">
+       <div class = "col-md-12">
+	  	   <a href="/register" class="btn btn-success">Register User</a>
+		     <!-- <a href="/" class="float-right button default">Frontend</a> -->
+	     </div>
+	  </div>
+    <div class = "row">
+	       <div class = "col-md-12">
+     				<br>       
+		     </div>
+    </div>
+	  <div class = "well">
+		<% if (users.length > 1) { %>
+		 <div class = "row">
+				<div class = "col-md-2">
+				  <label>image</label>
+				</div>
+				<div class = "col-md-2">
+					<label>Name</label>
+				</div>
+				<div class = "col-md-2">
+					<label>User Name</label>
+				</div>
+				<div class = "col-md-2">
+					<label>User Type</label>
+				</div>
+				<div class = "col-md-2">
+					<label>Email</label>
+				</div>
+				<div class = "col-md-2">
+					-
+				</div>
+		 </div>
+     <br>
+		 <% for(var i = 0; i<users.length; i++) { %>
+		 <div class = "row">
+			<div class = "col-md-2">
+				<img class="img-thumbnail" src="/images/uploads/<%= users[i].profileimage%>" height = '40px' width = '40px'>
+		  </div>
+		  <div class = "col-md-2">
+				<%=users[i].name%>
+			</div>
+			<div class = "col-md-2">
+				<%=users[i].username%>
+			</div>
+			<div class = "col-md-2">
+				<%=users[i].userType%>
+			</div>
+			<div class = "col-md-2">
+				<%=users[i].email%>
+			</div>
+			<div class = "col-md-2">
+				<a href="/editUser/<%=users[i].id%>" class="button default">Edit</a> 
+				<!-- <a href="/deleteUser/<%=users[i].id%>" data-id="<%=users[i].id%>" class="button alert delete-project">Delete</a> -->
+				<a href="#" data-id="<%=users[i].id%>" class="button alert delete-user">Delete</a> 
+			</div>
+		 </div>
+		 <% } }%>
+		 </div>
+<% include partials/footer %>

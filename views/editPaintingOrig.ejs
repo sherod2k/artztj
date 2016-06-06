@@ -1,0 +1,43 @@
+<% include partials/header %>
+	<h1>Edit Painting</h1>
+	<form enctype="multipart/form-data" method="post" action="/editPainting/<%=id %>">
+	  <div class="form-group">
+	    <label>Painting </label>
+	    <input type="text" class="form-control" name="name" value="<%=painting.name %>" placeholder="Painting Name">
+	  </div>
+	  <div class="form-group">
+	    <label>Painting Description</label>
+	    <input type="text" class="form-control" name="description" value="<%=painting.description %>" placeholder="Description">
+	  </div>
+	  <!-- <div class="form-group">
+	    <label>Genre</label>
+	    <select name="genre" class="form-control">
+	    	<% for(var i=0; i<genres.length; i++) {%>
+   				<option value="<%= genres[i].name %>" 
+   				<% if(album.genre == genres[i].name) { %>
+   					selected
+   				<% } %>>
+   				<%= genres[i].name %></option>
+			<% } %>
+	    </select>
+	  </div> -->
+	  <div class="form-group">
+	    <label>Painting Type</label>
+	    <input type="text" class="form-control" value="<%=painting.type %>" name="type">
+	  </div>
+	  <div class="form-group">
+	    <label>Size</label>
+	    <input type="text" class="form-control" value="<%=painting.size %>" name="size">
+	  </div>
+	  <div class="form-group">
+	    <label>Price</label>
+	    <input type="text" class="form-control" value="<%=painting.price %>" name="price">
+	  </div>
+	  <div class="form-group">
+	    <label>Image</label>
+	    <input type="file" class="form-control" name="image">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	   <a class="btn btn-danger" href="/view">Close</a>
+	</form>
+<% include partials/footer %>

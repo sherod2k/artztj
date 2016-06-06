@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "ngPaintings">
+<!-- <html lang="en"> -->
+  <head>
+    <meta charset = "utf-8">
+    <title>fbplugin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+
+  </head>
+ 
+  <body>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1696119543980589',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+   <div>
+     <h1>!!! Testing Facebook plugin !!!</h1>
+     <li>
+       <a href="/auth/facebook" class = "login">Sign in with Facebook</a>
+       <a href="/logout" class = "logout">logout</a>
+     </li>
+
+   </div>
+   <br>
+   <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+  </body>
+   
+</html>

@@ -1,0 +1,11 @@
+<% include partials/header %>
+  <div class = "row paintings">
+    <% for(var i = 0; i<paintings.length; i++) { %>
+      <div class="col-md-4 albums">
+        <a href="/paintings/view/<%=paintings[i].id %>">
+        <img src="/images/<%= paintings[i].paintingimage %>"></a>
+        <h4 class="painting-title text-center"><%= paintings[i].name %></h4>
+      </div>
+     <% } %>
+  </div>
+<% include partials/footer %>

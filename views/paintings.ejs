@@ -1,0 +1,37 @@
+<% include partials/header %>
+  
+  <% if(user){ %>
+  <div class = "row">
+    <div class="col-md-3">
+     <!-- <a href="/addPainting" class="btn btn-success pull-right">Add Painting</a>  -->
+     <p>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="col-md-9">
+      <p>
+    </div>
+  </div>
+	<% } %>
+	
+  <div class = "row paintings">
+    <% for(var i = 0; i<paintings.length; i++) { %>
+      <div class="col-md-4 albums">
+        <a href="details/<%=paintings[i].id %>">
+        <img src="/images/uploads/<%= paintings[i].paintingimage %>" height = "177px" width = "288px"><!-- </a><a href="#" data-id="<%= paintings[i].id %>" class="toggle-details btn btn-warning"><span class = "caret"></span></a>  -->
+        <h4 class="painting-title text-center"><%= paintings[i].name %></h4>
+
+        <!-- <div id = 'details' class="col-md12">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Type:</strong> <%= paintings[i].type %></li>
+            <li class="list-group-item"><strong>Size:</strong> <%= paintings[i].size %></li>
+            <li class="list-group-item"><strong>Price:</strong> <%= paintings[i].price %></li>
+          </ul>
+        </div> -->
+
+
+
+      </div>
+     <% } %>
+  </div>
+<% include partials/footer %>

@@ -1,0 +1,25 @@
+<% include partials/header %>
+ <p> Please login below
+ <div class = "row">
+  <div class = "col-md-6">
+   <div class = "well">
+    <form method='post' action='/login'>
+     <div class  = 'form-group'>
+     	<input class = 'form-control' name='username' type='text' placeholder='Please enter Username'></input>
+     </div>
+     <div class = 'form-group'>
+      <input class = 'form-control' name='password' type='password' placeholder='Please enter Password' width = '20%'></input>
+     </div>
+     <input class = 'btn.btn-primary' type='submit' name='submit' value='Login'></input>
+     <br><br>
+     <a href='/register' class="btn btn-info" role="button"> Register User </a>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class = "row">
+  <div class = "col-md-6">
+   <br>
+  </div>
+ </div>
+<% include partials/footer %>

@@ -1,0 +1,25 @@
+<% include partials/header %>
+	<!-- <a href="/view" class="btn btn-default">Go Back</a> -->
+	<h1><%=painting.name %> - <%=painting.description %></h1>
+	<div class="row painting">
+		<div class="col-md-4">
+			<img src="/images/uploads/<%= painting.paintingimage %>" height = "177px" width = "288px">
+		</div>
+		<div class="col-md-8">
+			<ul class="list-group">
+				<li class="list-group-item"><strong>Type:</strong> <%= painting.type %></li>
+				<li class="list-group-item"><strong>Size:</strong> <%= painting.size %></li>
+				<li class="list-group-item"><strong>Price:</strong> <%= painting.price %></li>
+				<li class="list-group-item"><strong>Painting Image:</strong> <%= painting.paintingimage%></li>
+			</ul>
+		</div>
+	</div>
+  <hr />
+  <br />
+	<hr />
+	<% if (user && global.userType == "admin") { %>
+	<a href="/editPainting/<%= painting.id %>" class="btn btn-default">Edit</a> 
+	<a href="#" data-id="<%= id %>" class="delete-painting btn btn-danger">Delete</a>
+	<a class="btn btn-danger" href="/view">Close</a>
+	<% } %>
+<% include partials/footer %>

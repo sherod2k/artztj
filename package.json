@@ -1,0 +1,42 @@
+{
+  "name": "tjarts",
+  "version": "1.0.0",
+  "description": "Art Gallery",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.2",
+    "express": "~4.13.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.4",
+    "jade": "~1.11.0",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.4.14",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "node-twitter-api": "^1.7.2",
+    "nodemailer": "^2.4.2",
+    "nodemailer-smtp-transport": "^2.5.0",
+    "passport": "~0.2.0",
+    "passport-facebook": "^1.0.3",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-alpha7",
+    "serve-favicon": "^2.3.0"
+  },
+  "author": "Sherod",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  },
+  "engines": {
+    "node": "4.4.1"
+  }
+}
